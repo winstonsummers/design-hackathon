@@ -43,16 +43,18 @@ class Icebreaker extends Component {
       return <option value={r}>{r}</option>
     });
     return (
-      <div>
-        <p>Choose something</p>
-        {this.state.iceBreaker}
+      <div className="polar-background2">
+        <div className="instructions"><p>Choose a topic to break the ice!</p></div>
+        <div className="button-div">
         <form>
-          <select type="text" onChange={this.topicSelect}>
+          <select className="input-field" type="text" onChange={this.topicSelect}>
             <option value="" disabled defaultValue hidden>--Choose a topic--</option>
             {allTheTopics}
           </select>
-          <input type="submit" onClick={this.iceSubmit} />
+          <input className="input-button" type="submit" onClick={this.iceSubmit} />
         </form>
+         <div className="results-ice">{this.state.iceBreaker}</div>
+        </div>
       </div>
     );
   }

@@ -1,45 +1,108 @@
 /* CUSTOM STYLES */
 nav {
   width: 100%;
-  background-color: #555;
+  background-color: #4A90E2;
   padding: 10px 0;
+  color: white;
+  text-align: left;
+  margin-left: 18px;
 }
 
 nav a {
   margin: 10px;
   text-decoration: none;
-  font-size: 18px;
-  color: #4ff;
+  font-size: 32px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 nav a:hover {
   color: #7f4dd2;
 }
+body{
+  background-color: #4A90E2;
+  font-family: 'Montserrat', sans-serif;
+
+}
 .polar-background{
-  height: 500px;
-  width: auto;
-  background-image: url('./images/bear_home.png');
   background-size: 100%;
+  width: 500px;
+  height: 1000px;
+  margin: -220px auto;
+  background-image: url('./images/bear_home.png');
   background-repeat: no-repeat;
 }
+.polar-background2{
+  background-size: 100%;
+  width: 500px;
+  height: 1000px;
+  margin: -220px auto;
+  background-image: url('./images/bear.png');
+  background-repeat: no-repeat;
+}
+.instructions{
+  position: absolute;
+  text-align: center;
+  height: 150px;
+  width: 300px;
+  background-color: transparent;
+  margin: 370px 0 0 86px;
+}
+.results-ice{
+  position: absolute;
+    text-align: center;
+    font-size: 32px;
+    height: 250px;
+    width: 300px;
+    background-color: transparent;
+    margin: 50px 0 0 8px;
+}
+.button-div{
+    position: absolute;
+    text-align: center;
+    height: 250px;
+    width: 300px;
+    background-color: transparent;
+    margin: 421px 0 0 86px;
+}
+.results{
+    height: 300px;
+    width: 200px;
+    background-color: #fff;
+    position: absolute;
+    text-align: left;
+    margin: 480px 0 0 148px;
+    overflow: scroll;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 4px;
 
+}
 .meetup-button{
   height: 50px;
   width: 150px;
-  background-color: purple;
+  background-image: url('./images/meetupicon.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 14px auto;
 }
 .ice-button{
   height: 50px;
-  width: 150px;
-  background-color: red;
+  width: auto;
+  margin-top: 91px;
+  background-color: transparent;
 }
+
 .meetup-link{
   text-decoration: none;
   color: black;
+  font-size: 68px;
 }
 .ice-link{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-size: 28px;
 }
 
 .footer {
@@ -116,14 +179,27 @@ nav a:hover {
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color: #4A90E2;
+  height: 100px;
+  font-size: 64px;
   padding: 20px;
   color: white;
+
+}
+.input-field{
+  width: 80px;
+  height: 30px;
+  margin-right: 20px;
+
+}
+.input-button{
+  width: 80px;
+  height: 30px;
 }
 
 .App-title {
   font-size: 1.5em;
+  margin: -40px;
 }
 
 .App-intro {
