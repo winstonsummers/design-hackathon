@@ -26,6 +26,7 @@ app.use(function(req, res, next) {
 // Controllers
 app.use('/auth', require('./routes/auth'));
 //can't forget our meetup router
+app.use('/meetup', require('./routes/meetup'));
 
 app.get('*', function(req, res, next) {
 	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));

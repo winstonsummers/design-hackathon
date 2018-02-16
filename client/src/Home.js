@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import allIce from './iceBreakers.js';
+import axios from 'axios';
 
 class Home extends Component {
   constructor(props){
@@ -8,8 +9,28 @@ class Home extends Component {
   		location: '',
   		results: [],
   		iceBreaker: '',
-  		topic: ''
+  		topic: '',
+      meets: []
   	}
+  }
+
+  localSubmit = (e) => {
+    e.preventDefault();
+    let local = this.state.location;
+    axios.post('/meetup/meets', {
+      location: local
+    }).then(res => {
+      console.log('made it back');
+      console.log(res);
+      this.setState({meets: res.data.results})
+    }).catch(err => {
+      console.log('err', err);
+    })
+  }
+
+  localChange = (e) => {
+    this.setState({location:e.target.value});
+    console.log(this.state.location);
   }
 
   iceSubmit = (e) => {
@@ -35,7 +56,7 @@ class Home extends Component {
 
   topicSelect = (e) => {
     this.setState({topic:e.target.value})
-    console.log(this.state.topic)
+    console.log(this.state)
   }
 
   render(){
@@ -54,6 +75,10 @@ class Home extends Component {
             {allTheTopics}
           </select>
           <input type="submit" onClick={this.iceSubmit} />
+        </form>
+        <form onSubmit={this.localSubmit} >
+          <input type="text" onChange={this.localChange} />
+          <input type="submit" value="look up" />
         </form>
       </div>
     );
