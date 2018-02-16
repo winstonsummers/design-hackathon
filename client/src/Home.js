@@ -15,7 +15,22 @@ class Home extends Component {
   iceSubmit = (e) => {
     e.preventDefault()
     console.log(allIce, 'state', this.state.topic)
-  	this.setState({iceBreaker:allIce.funny[Math.floor(Math.random() * (allIce.funny.length + 1))]})
+    let topic = this.state.topic;
+    if(topic === 'funny'){
+  	 this.setState({iceBreaker:allIce.funny[Math.floor(Math.random() * (allIce.funny.length + 1))]})
+    }else if(topic === 'smart'){
+      this.setState({iceBreaker:allIce.smart[Math.floor(Math.random() * (allIce.smart.length + 1))]})
+    }else if(topic === 'rich'){
+      this.setState({iceBreaker:allIce.rich[Math.floor(Math.random() * (allIce.rich.length + 1))]})
+    }else if(topic === 'partyAnimal'){
+      this.setState({iceBreaker:allIce.partyAnimal[Math.floor(Math.random() * (allIce.partyAnimal.length + 1))]})
+    }else if(topic === 'marriageMaterial'){
+      this.setState({iceBreaker:allIce.marriageMaterial[Math.floor(Math.random() * (allIce.marriageMaterial.length + 1))]})
+    }else if(topic === 'professional'){
+      this.setState({iceBreaker:allIce.professional[Math.floor(Math.random() * (allIce.professional.length + 1))]})
+    }else if(topic === 'outdoorsy'){
+      this.setState({iceBreaker:allIce.outdoorsy[Math.floor(Math.random() * (allIce.outdoorsy.length + 1))]})
+    }
   }
 
   topicSelect = (e) => {
