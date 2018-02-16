@@ -15,6 +15,32 @@ nav a {
 nav a:hover {
   color: #7f4dd2;
 }
+.polar-background{
+  height: 500px;
+  width: auto;
+  background-image: url('./images/bear_home.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.meetup-button{
+  height: 50px;
+  width: 150px;
+  background-color: purple;
+}
+.ice-button{
+  height: 50px;
+  width: 150px;
+  background-color: red;
+}
+.meetup-link{
+  text-decoration: none;
+  color: black;
+}
+.ice-link{
+  text-decoration: none;
+  color: black;
+}
 
 .footer {
   background-color: #555;
