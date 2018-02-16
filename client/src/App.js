@@ -9,6 +9,9 @@ import Nav from './layout/Nav.js';
 import Login from './auth/Login.js';
 import Profile from './Profile.js';
 import Signup from './auth/Signup.js';
+import Meetup from './layout/meetup.js';
+import Icebreaker from './layout/icebreakerform.js';
+
 
 class App extends Component {
   constructor(props){
@@ -82,6 +85,10 @@ class App extends Component {
                 () => (<Signup user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
               <Route path="/profile" component={
                 () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/icebreakerform" component={
+                () => (<Icebreaker />)} />
+              <Route path="/meetup" component={
+                () => (<Meetup />)} />
             </div>
           </div>
         </Router>
