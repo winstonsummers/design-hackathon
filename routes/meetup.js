@@ -16,6 +16,7 @@ router.post('/meets', function(req,res,cb){
 		zip: req.body.location
 	}
 	meetup.getOpenEvents(parameters, function(err, resp) {
+		console.log("reeeeespone", resp, err);
 		res.json(resp);
 	});
 });
